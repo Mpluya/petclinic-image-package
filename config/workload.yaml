@@ -1,0 +1,11 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  labels:
+    app.kubernetes.io/part-of: petclinic-image-package
+    apps.tanzu.vmware.com/carvel-package-workflow: "true"
+    apps.tanzu.vmware.com/workload-type: server
+  name: petclinic-image-package
+  namespace: mae
+spec:
+  image: springcommunity/spring-framework-petclinic
